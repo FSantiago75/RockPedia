@@ -91,6 +91,7 @@ nav ul li:hover > ul {
 .back-to-top {
     background-color: #920000;
     color: white;
+    display: none;
     cursor: pointer;
     font-family: 'Extradition', sans-serif;
     font-weight: 600;
@@ -107,7 +108,7 @@ nav ul li:hover > ul {
     color: white;
     font-family: 'Lusitana', sans-serif;
     text-align: justify;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     width: 100%;
     padding: 1rem;
     margin: 0; /* Remove margem padrão */
@@ -120,7 +121,7 @@ nav ul li:hover > ul {
 .container {
     border: 3px solid #920000;
     width: auto;
-    max-width: 60%; /* Limita a largura máxima para 60% */
+    max-width: 75%; /* Limita a largura máxima para 60% */
     display: inline-block;
     border-radius: 10px;
     box-sizing: border-box; /* Inclui padding e border na largura e altura */
@@ -128,7 +129,7 @@ nav ul li:hover > ul {
 }
 
 .wrapper {
-    margin-top: 6rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
     padding-bottom: 3rem; /* Espaço adicional abaixo da wrapper */
@@ -139,6 +140,7 @@ nav ul li:hover > ul {
 @media (max-width: 768px) {
     .title {
         font-size: 1rem;
+        top: 24px;
     }
 
     nav ul {
@@ -167,7 +169,8 @@ nav ul li:hover > ul {
 
 @media (max-width: 480px) {
     .title {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        top: 25px;
     }
 
     nav ul {
@@ -185,7 +188,38 @@ nav ul li:hover > ul {
     }
 
     .text {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .back-to-top {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .title {
+        font-size: .7rem;
+        top: 29px;
+        right: 15px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul a {
+        font-size: 0.6rem;
+        padding: 6px;
+    }
+
+    nav ul ul li a {
+        font-size: 0.6rem;
+        padding: 4px;
+    }
+
+    .text {
+        font-size: .8rem;
     }
 
     .back-to-top {
