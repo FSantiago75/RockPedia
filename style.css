@@ -1,0 +1,229 @@
+@import url('https://fonts.cdnfonts.com/css/extradition');
+@import url('https://fonts.cdnfonts.com/css/lusitana');
+
+* {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+body {
+    background-color: #252525;
+    margin: 0; /* Garante que não haja margem externa */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #920000;
+    padding: 1rem;
+    box-shadow: 0px 0px 15px rgb(255, 0, 0);
+}
+
+nav {
+    z-index: 1000;
+    background-color: #920000;
+    padding: .2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 5%;
+    padding: .2rem;
+    margin: 0;
+}
+
+nav ul a {
+    font-family: 'Extradition', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav ul a:hover, .back-to-top:hover {
+    background: radial-gradient(circle, #da0000 10%, #920000 90%);
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #920000;
+    top: 50px;
+    white-space: nowrap;
+    padding: 0;
+}
+
+nav ul ul li a {
+    display: block;
+    padding: .5rem;
+}
+
+nav ul ul li {
+    position: relative;
+}
+
+nav ul ul ul {
+    top: 0;
+    padding: 0;
+    left: 100%;
+    width: auto;
+    white-space: nowrap;
+    background-color: #920000;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+.title {
+    right: 30px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    margin-left: 2rem;
+    font-family: 'Extradition', sans-serif;
+}
+
+
+.back-to-top {
+    background-color: #920000;
+    color: white;
+    display: none;
+    cursor: pointer;
+    font-family: 'Extradition', sans-serif;
+    font-weight: 600;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente e adiciona espaço acima e abaixo */
+    margin-bottom: 6rem;
+}
+
+.text {
+    background: rgb(61, 61, 61);
+    color: white;
+    font-family: 'Lusitana', sans-serif;
+    text-align: justify;
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 0; /* Remove margem padrão */
+    border-radius: 10px;
+    border: 4px solid #1d1d1d;
+    overflow-wrap: break-word; /* Garante que as palavras quebrem corretamente */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+.container {
+    border: 3px solid #920000;
+    width: auto;
+    max-width: 75%; /* Limita a largura máxima para 60% */
+    display: inline-block;
+    border-radius: 10px;
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+    margin-bottom: 2rem; /* Espaço entre o conteúdo e o botão */
+}
+
+.wrapper {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem; /* Espaço adicional abaixo da wrapper */
+    position: relative; /* Garante que o botão fique posicionado corretamente */
+}
+
+/* Media queries para dispositivos menores */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1rem;
+        top: 24px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul a {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    nav ul ul li a {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .container {
+        max-width: 90%; /* Ajusta a largura máxima para 90% em telas menores */
+    }
+
+    .text {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1rem;
+        top: 25px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul a {
+        font-size: 0.7rem;
+        padding: 6px;
+    }
+
+    nav ul ul li a {
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .back-to-top {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .title {
+        font-size: .7rem;
+        top: 29px;
+        right: 15px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul a {
+        font-size: 0.6rem;
+        padding: 6px;
+    }
+
+    nav ul ul li a {
+        font-size: 0.6rem;
+        padding: 4px;
+    }
+
+    .text {
+        font-size: .8rem;
+    }
+
+    .back-to-top {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
