@@ -5,11 +5,15 @@ const textBox = document.querySelector('.text');
 window.addEventListener("scroll", function(){
     const scrollTop = document.documentElement.scrollTop;
     console.log(scrollTop);
-    if (scrollTop > 500){
+    if (scrollTop > 200){
         backToTop.style.display = "block";
     } else {
         backToTop.style.display = "none";
     }
+});
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 
