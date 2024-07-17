@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/extradition');
-@import url('https://fonts.cdnfonts.com/css/lusitana');* {
+@import url('https://fonts.cdnfonts.com/css/lusitana');
+
+* {
     font-family: Helvetica;
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-    background-color: #252525; 
+    background-color: #252525;
     margin: 0; /* Garante que não haja margem externa */
 }
 
@@ -20,22 +22,22 @@ header {
 }
 
 nav {
-    z-index: 1000; /* Valor alto para garantir que a navbar sobreponha outros elementos */
-
+    z-index: 1000;
     background-color: #920000;
+    padding: .2rem;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20%;
+    gap: 5%;
     padding: .2rem;
     margin: 0;
 }
 
 nav ul a {
-    font-family: 'Extradition', sans-serif;   
-    font-weight: 600;                              
+    font-family: 'Extradition', sans-serif;
+    font-weight: 600;
     font-size: 1rem;
     color: rgb(255, 255, 255);
     padding: 15px;
@@ -77,20 +79,16 @@ nav ul li:hover > ul {
     display: block;
 }
 
-h1.title {
+.title {
     right: 30px;
     position: absolute;
     color: rgb(255, 255, 255);
     margin-left: 2rem;
-    font-family: 'Extradition', sans-serif; 
+    font-family: 'Extradition', sans-serif;
 }
 
-h1 {
-    color: rgb(196, 196, 196);
-}
 
 .back-to-top {
-    display: none;
     background-color: #920000;
     color: white;
     cursor: pointer;
@@ -100,7 +98,8 @@ h1 {
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-    margin: 2rem auto; /* Centraliza horizontalmente e adiciona espaço acima e abaixo */
+    margin: 0 auto; /* Centraliza horizontalmente e adiciona espaço acima e abaixo */
+    margin-bottom: 6rem;
 }
 
 .text {
@@ -121,7 +120,7 @@ h1 {
 .container {
     border: 3px solid #920000;
     width: auto;
-    max-width: 60%; /* Limita a largura máxima para 80% */
+    max-width: 60%; /* Limita a largura máxima para 60% */
     display: inline-block;
     border-radius: 10px;
     box-sizing: border-box; /* Inclui padding e border na largura e altura */
@@ -129,12 +128,52 @@ h1 {
 }
 
 .wrapper {
-    margin-top: 2rem;
+    margin-top: 6rem;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
     padding-bottom: 3rem; /* Espaço adicional abaixo da wrapper */
     position: relative; /* Garante que o botão fique posicionado corretamente */
+}
+
+/* Media queries para dispositivos menores */
+@media (max-width: 768px) {
+    h1.title {
+        font-size: 1.4rem;
+    }
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul a {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 90%; /* Ajusta a largura máxima para 90% em telas menores */
+    }
+
+    .text {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.title {
+        font-size: 1.4rem;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .back-to-top {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
 }
